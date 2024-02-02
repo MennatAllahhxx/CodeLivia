@@ -12,25 +12,20 @@
 <body>
   <div class="editor">
     <div class="editor-left">
-      <label><i class="fa-brands fa-html5"></i> HTML</label>
-      <textarea id="html-code"></textarea>
+      <label><i class="fa-brands fa-html5"></i>HTML</label>
+      <textarea id="html-code" onkeyup="run()"></textarea>
 
-      <label><i class="fa-brands fa-css3-alt"></i> CSS</label>
-      <textarea id="css-code"></textarea>
+      <label><i class="fa-brands fa-css3-alt"></i>CSS</label>
+      <textarea id="css-code" onkeyup="run()"></textarea>
 
-      <label><i class="fa-brands fa-js"></i> JavaScript</label>
-      <textarea id="js-code"></textarea>
+      <label><i class="fa-brands fa-js"></i>JavaScript</label>
+      <textarea id="js-code" onkeyup="run()"></textarea>
     </div>
     <div class="editor-right">
-      <label><i class="fa-solid fa-play"></i> RUN</label>
+      <label><i class="fa-solid fa-play"></i>RUN</label>
       <iframe id="output"></i> RUN</iframe>
     </div>
   </div>
-
-  <!--ACE Libraries-->
-  <script src="lib/js/ace_editor/src-min/ace.js"></script>
-  <script src="lib/js/ace_editor/src-min/mode-javascript.js"></script>
-  <script src="lib/js/ace_editor/src-min/ext-language_tools.js"></script>
 
   <!--editor js files-->
   <script src="lib/js/editor.js"></script>
