@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="lib/css/editor.css">
+  <title>CodeLivia</title>
+</head>
+
+<body>
+  <div class="editor">
+    <div class="editor-wrapper">
+      <div class="editor-body">
+        <div class="editor-code" id="editorCode">
+
+        </div>
+      </div>
+      <div class="editor-footer">
+        <div class="editor-footer-left">
+          <button class="editor-btn editor-run">RUN</button>
+          <button class="editor-btn editor-reset">RESET</button>
+        </div>
+        <div class="editor-footer-right">
+          <div class="editor-console">
+            <ul class="editor-console-logs"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--ACE Libraries-->
+  <script src="lib/js/ace_editor/src-min/ace.js"></script>
+  <script src="lib/js/ace_editor/src-min/mode-javascript.js"></script>
+
+  <!--editor js files-->
+  <script src="lib/js/editor.js"></script>
+</body>
+
+</html>
