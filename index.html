@@ -4,30 +4,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="lib/css/editor.css">
-  <script src="https://kit.fontawesome.com/6157e07072.js" crossorigin="anonymous"></script>
   <title>CodeLivia</title>
+  <!-- Link to your external CSS file -->
+  <link rel="stylesheet" href="lib/css/editor.css">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/6157e07072.js" crossorigin="anonymous"></script>
+  <!-- Ace Editor CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
 </head>
 
 <body>
   <div class="editor">
     <div class="editor-left">
       <label><i class="fa-brands fa-html5"></i>HTML</label>
-      <textarea id="html-code" onkeyup="run()"></textarea>
+      <div id="html-code" class="code-editor"></div>
 
       <label><i class="fa-brands fa-css3-alt"></i>CSS</label>
-      <textarea id="css-code" onkeyup="run()"></textarea>
+      <div id="css-code" class="code-editor"></div>
 
       <label><i class="fa-brands fa-js"></i>JavaScript</label>
-      <textarea id="js-code" onkeyup="run()"></textarea>
+      <div id="js-code" class="code-editor"></div>
     </div>
     <div class="editor-right">
-      <label><i class="fa-solid fa-play"></i>RUN</label>
-      <iframe id="output"></i> RUN</iframe>
+      <label><i class="fa-solid fa-play"></i>OUTPUT</label>
+      <iframe id="output"></iframe>
     </div>
   </div>
-
-  <!--editor js files-->
+  <!-- Link to external JavaScript file -->
   <script src="lib/js/editor.js"></script>
 </body>
 
