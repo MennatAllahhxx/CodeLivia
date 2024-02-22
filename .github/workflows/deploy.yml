@@ -1,0 +1,116 @@
+name: Deploy to Servers
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Server 1
+        uses: appleboy/ssh-action@master
+        with:
+          host: 100.26.252.2
+          username: ubuntu
+          private-key: -----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
+NhAAAAAwEAAQAAAYEArQjMfmSwQmu/za2R45+6nXV0qujGoQ/Vb6TMfaFb8IxNWS2jnBmQ
+2O+qCvStD7+MGN6rYMxK6IzTKvjg4Xptl08qyOwywO4nDxTUPapel+9kn9BwhGsZ0Av0kD
+23y1+RvX8ze81zZqraeifFVsqKowKvO/0jVZGIGfBLHNurnv6F43lmQhfYJp/NSymX6mWk
+zv5YBgZ0hT/k+AMhtiAZxJoSvYj+xeZNlBemh5MEyrCJJTlNd0GVvJ2LzngYDJP//EXR9H
+8cCc6wPa1eIN7afqFWmj8xEe7zZq4tYOmJFU0SyMJ4m8e8UYhvpHTnRAjqoJBiJB1pA6qp
+WIP2TNLgSyjLW/sqdJs1hdkER1gzWYg0eVpbchjKXxpH+JNb1eaj3MvK1KPsMOUgxX16Nw
+RAReAzJBpBEzpnCMJsKaOCippHmxKkpkL7B2iaAxvdWluzCNhKoyCaYHeIUk7aGWk67aem
+lepTNWv2zpp/C4yq5zN+iht9lVgpnP9Zu0Skr8ipAAAFkI3lG6uN5RurAAAAB3NzaC1yc2
+EAAAGBAK0IzH5ksEJrv82tkeOfup11dKroxqEP1W+kzH2hW/CMTVkto5wZkNjvqgr0rQ+/
+jBjeq2DMSuiM0yr44OF6bZdPKsjsMsDuJw8U1D2qXpfvZJ/QcIRrGdAL9JA9t8tfkb1/M3
+vNc2aq2nonxVbKiqMCrzv9I1WRiBnwSxzbq57+heN5ZkIX2CafzUspl+plpM7+WAYGdIU/
+5PgDIbYgGcSaEr2I/sXmTZQXpoeTBMqwiSU5TXdBlbydi854GAyT//xF0fR/HAnOsD2tXi
+De2n6hVpo/MRHu82auLWDpiRVNEsjCeJvHvFGIb6R050QI6qCQYiQdaQOqqViD9kzS4Eso
+y1v7KnSbNYXZBEdYM1mINHlaW3IYyl8aR/iTW9Xmo9zLytSj7DDlIMV9ejcEQEXgMyQaQR
+M6ZwjCbCmjgoqaR5sSpKZC+wdomgMb3VpbswjYSqMgmmB3iFJO2hlpOu2nppXqUzVr9s6a
+fwuMquczfoobfZVYKZz/WbtEpK/IqQAAAAMBAAEAAAGBAJrFkAROE8qVjk5uvluX99f3w4
+9L/r755rOh+Lc2qYIUPOtTg1CRHZqtZK/AAzxe3PUx1qESmr4/mHKLgrqsQ3JgAakOfKdN
+XeqDewRda5cDLkI0sy/+jGwnBW4vhkKHDVkueeJ29o4SrLEu+biUGkWMlSlXV0+miNKKuO
+TrKCtjBmddozXjFhgWQA7G+XdTy4LKxfk9tOOrLycXxgOd2u6b0b9u1lQ1l5arQO1rd5HF
+Lib5hmzxYPoBAZiAmyJFDe6YLtgcarsEGmAryaj6PfOaqkYzRtSjYYzf7iDrTnsYTlhI7P
+P+pj1OgAUO2G/8eIOXesKb03vPtU6L5oZ8Da708TnYmtRqyD7phgNaNhVNJWqtbg1g4fr/
+x12DttFDn6tP0PigtsH7Z48a80eBDlS1zycVv69TbggaDXp8UXraDGBcW00HQlX6mnJK7z
+obzfn5zbXEgVfpxiZ4S+yCRwRH+qm2qFB8AYgN5giYxm4lQbOwVEvteByge14OAuWSwQAA
+AMEAoDZF01dhFAWZCMTM+zwliNRZ6mjq8d6FuALNaNUY6fQpy2oB37CKBlCGW4JdnIH7Za
+1/gvF86urezkugnEOy+2jku7eVktbvmAGnJA5oChlFmcOgYVnFrRSE1PfZaZCLovuhnD1V
+Nz9YfoRixHfjWhqFPJyAalyxKKtfGedE2xDJuS313yEEHrKOX50C/q8f1Nl0LE5GA5zTj/
+Nt2z8gxbSUhKQWJUGihnPz2Hdb1PfhMuxZfOkWM85zJF1/03slAAAAwQDdoABAZJ9gzY07
+GJ3bT+aCGgVDlckbFLnBNSfj78vQKBWBiGK23qTMWAra1HXHGQjt3ta31Zc4ClTux35SK4
+pAERUbkRWF9GD3KNIrOjL1ajP78okMz3FdG9hL2dG6fTG/NIPPVNUKEQadeNEAcVIlwwaf
++fETelbSECRAagY5lkCiZu0pV7bNJW8PkQZki1/ijXBWn4yGghlxQjnSJMGUZRrgaUvpsM
+14UhmzIEqwWkb5TB1o9Cc9I20btqSRAPUAAADBAMffbH13JQYC8oixvZz4jfH5lotx0Sja
+3Kkm8Qvg61djB+5wIKIc6TYtEaPHDzuwPe5doihjCy5KpGQkGq/uDDDq9Pxvyn6niypBJR
+MVxILq3COJFB38KE5pH4YbJtRkW75AG9HAkW+7e386KApye7eHoI4YxYEpCvCzMyf7Fqdd
+Qmfsj6LrTeHZufYoFX4fzktYCvNIekss8FYul3z9pD1v5f74c40vFzjVX+Jk8EODta8Fhy
+T1eAPnEbcUIu/IZQAAABRtZW5uYUBMQVBUT1AtN0Y5SU1SRgECAwQF
+-----END OPENSSH PRIVATE KEY-----
+          script: |
+            cd /var/www/myapp
+            git pull origin main
+            sudo systemctl reload nginx
+
+      - name: Deploy to Server 2
+        uses: appleboy/ssh-action@master
+        with:
+          host: 54.237.27.95
+          username: ubuntu
+          private-key: -----BEGIN OPENSSH PRIVATE KEY-----
+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
+-----END OPENSSH PRIVATE KEY-----
+          script: |
+            cd /var/www/myapp
+            git pull origin main
+            sudo systemctl reload nginx
