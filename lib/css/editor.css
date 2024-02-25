@@ -43,12 +43,3 @@ button:hover {
   background-color:#ba9ffb;
   color: white;
 }
-
-@media (max-width: 1024px){ 
-  .logo {
-    width: 70%;
-  }
-  .slogan {
-    font-size: 25px;
-  }
-}
