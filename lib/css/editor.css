@@ -17,13 +17,19 @@ body{
   color: #ffffff;
   width: 100%;
 }
-.website-name {
+
+.header {
   display: flex;
-  justify-content: right;
-  padding-top: 15px;
-  padding-right: 20px;
-  font-size:xx-large;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 10px;
 }
+
+.logo {
+  width: 300px;
+  height: auto;
+}
+
 .editor{
   width: 100%;
   height: 100vh;
@@ -45,7 +51,7 @@ body{
 }
 iframe{
   width: 100%;
-  height: 90%;
+  height: 87%;
   background: #fff;
   border: 0;
   outline: 0;
