@@ -15,4 +15,4 @@ CodeLivia is an online code editor for HTML, CSS, and JavaScript. It is a simple
 
 1. Open the CodeLivia website in your web browser.
 2. Write your HTML, CSS, or JavaScript code in the code editor.
-3. Click the "Run" button to see your code in action.
+3. in "Output" section you will see your code in action.
