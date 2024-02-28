@@ -3,39 +3,24 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CodeLivia</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <title>Get Started with CodeLivia!</title>
+  <link rel="icon" href="lib/images/logo.png" type="image/icon type">
   <!-- Link to your external CSS file -->
   <link rel="stylesheet" href="lib/css/editor.css">
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/6157e07072.js" crossorigin="anonymous"></script>
-  <!-- Ace Editor CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.js"></script>
 </head>
 
 <body>
-  <div class="header">
-    <img src="lib/images/logo.png" alt="Logo" class="logo">
+  <div class="logo">
+    <img src="lib/images/logo.png" alt="Logo">
   </div>
-  <div class="editor">
-    <div class="editor-left">
-      <label><i class="fa-brands fa-html5"></i>HTML</label>
-      <div id="html-code" class="code-editor"></div>
-
-      <label><i class="fa-brands fa-css3-alt"></i>CSS</label>
-      <div id="css-code" class="code-editor"></div>
-
-      <label><i class="fa-brands fa-js"></i>JavaScript</label>
-      <div id="js-code" class="code-editor"></div>
-    </div>
-    <div class="editor-right">
-      <label><i class="fa-solid fa-play"></i>OUTPUT</label>
-      <iframe id="output"></iframe>
-    </div>
-  </div>
-  <!-- Link to external JavaScript file -->
-  <script src="lib/js/editor.js"></script>
+  <p class="slogan">
+    Live. Code. <span>CodeLivia.</span>
+  </p>
+  <button onclick="window.location.href = 'main/index.html';" alt="Start!" type="button">
+    Get Started
+  </button>
 </body>
-
 </html>
